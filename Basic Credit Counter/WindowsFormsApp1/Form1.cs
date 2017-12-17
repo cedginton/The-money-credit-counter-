@@ -76,13 +76,7 @@ namespace WindowsFormsApp1
 
         private void Button50P_Click(object sender, EventArgs e)
         {
-            if (CPCtotal.Text == "0") // checks if credit value has been set
-            {
-                MessageBox.Show("You have not set the cost of a credit"); //if not show a message
-            }
-            else //else perform the actions below for functionality
-            {
-                P50 = P50 + 1; // When 50p button clicked add 1 to number.
+            P50 = P50 + 1; // When 50p button clicked add 1 to number.
             Ptotal = Ptotal + 50; // When 5p button clicked add 50 to total money
             PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
             p50_count.Text = P50.ToString(); //updates the total number of coins label
@@ -91,13 +85,7 @@ namespace WindowsFormsApp1
 
         private void Button5P_Click(object sender, EventArgs e)
         {
-            if (CPCtotal.Text == "0") // checks if credit value has been set
-            {
-                MessageBox.Show("You have not set the cost of a credit"); //if not show a message
-            }
-            else //else perform the actions below for functionality
-            {
-                P5 = P5 + 1; // When 5p button clicked add 1 to number.
+            P5 = P5 + 1; // When 5p button clicked add 1 to number.
             Ptotal = Ptotal + 5; // When 5p button clicked add 5 to total money
             PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
             p5_count.Text = P5.ToString(); //updates the total number of coins label
@@ -111,13 +99,8 @@ namespace WindowsFormsApp1
 
         private void Button20P_Click(object sender, EventArgs e)
         {
-            if (CPCtotal.Text == "0") // checks if credit value has been set
-            {
-                MessageBox.Show("You have not set the cost of a credit"); //if not show a message
-            }
-            else //else perform the actions below for functionality
-            {
-                P20 = P20 + 1; // When 20p button clicked add 1 to number.
+
+            P20 = P20 + 1; // When 20p button clicked add 1 to number.
             Ptotal = Ptotal + 20; // When 20p button clicked add 20 to total money
             PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
             p20_count.Text = P20.ToString(); //updates the total number of coins label
@@ -152,13 +135,7 @@ namespace WindowsFormsApp1
 
         private void Button10P_Click(object sender, EventArgs e)
         {
-                        if (CPCtotal.Text == "0") // checks if credit value has been set
-                        {
-                            MessageBox.Show("You have not set the cost of a credit"); //if not show a message
-                        }
-                        else //else perform the actions below for functionality
-                        {
-                            P10 = P10 + 1; // When 10p button clicked add 1 to number.
+            P10 = P10 + 1; // When 10p button clicked add 1 to number.
             Ptotal = Ptotal + 10; // When 10p button clicked add 10 to total money
             PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
             p10_count.Text = P10.ToString(); //updates the total number of coins label
@@ -166,18 +143,21 @@ namespace WindowsFormsApp1
         }
 
         private void Button1Q_Click(object sender, EventArgs e)
-                              if (CPCtotal.Text == "0") // checks if credit value has been set
-                        {
-                            MessageBox.Show("You have not set the cost of a credit"); //if not show a message
-                        }
-                        else //else perform the actions below for functionality
-                        {
-                            {
+        {
             Q1 = Q1 + 1; // When 1 pound button clicked add 1 to number.
             Ptotal = Ptotal + 100; // When 1 pound button clicked add 100 to total money
             PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
             q1_count.Text = Q1.ToString(); //updates the total number of coins label
             UpdateTotals(); // calls function to update totals on screen   
+        }
+
+        private void Button2Q_Click(object sender, EventArgs e)
+        {
+            Q2 = Q2 + 1; // When 1 pound button clicked add 1 to number.
+            Ptotal = Ptotal + 200; // When 2 pound button clicked add 200 to total money
+            PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
+            q2_count.Text = Q1.ToString(); //updates the total number of coins label
+            UpdateTotals(); // calls function to update totals on screen  
         }
     }
 }
