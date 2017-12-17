@@ -159,5 +159,14 @@ namespace WindowsFormsApp1
             q2_count.Text = Q1.ToString(); //updates the total number of coins label
             UpdateTotals(); // calls function to update totals on screen  
         }
+
+        private void Btn_reset_Click(object sender, EventArgs e)
+        {
+            PenceTotal.Text = ""; // Resets all the content in the text box back to its original state of nothing
+            PoundTotal.Text = ""; //Resets all the content in the text box back to its original state of nothing
+            CPCtotal.Text = ""; //Resets all the content in the text box back to its original state of nothing
+            NOCtotal.Text = ""; //Resets all the content in the text box back to its original state of nothing
+
+        }
     }
 }
