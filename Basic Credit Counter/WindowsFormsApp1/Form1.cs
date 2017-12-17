@@ -76,7 +76,11 @@ namespace WindowsFormsApp1
 
         private void Button50P_Click(object sender, EventArgs e)
         {
-
+            P50 = P50 + 1; // When 50p button clicked add 1 to number.
+            Ptotal = Ptotal + 50; // When 5p button clicked add 50 to total money
+            PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
+            p50_count.Text = P50.ToString(); //updates the total number of coins label
+            UpdateTotals(); // calls function to update totals on the screen
         }
 
         private void Button5P_Click(object sender, EventArgs e)
@@ -95,7 +99,7 @@ namespace WindowsFormsApp1
 
         private void Button20P_Click(object sender, EventArgs e)
         {
-            P10 = P20 + 1; // When 20p button clicked add 1 to number.
+            P20 = P20 + 1; // When 20p button clicked add 1 to number.
             Ptotal = Ptotal + 20; // When 20p button clicked add 20 to total money
             PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
             p20_count.Text = P20.ToString(); //updates the total number of coins label
