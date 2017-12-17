@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp1
 {
-    public partial class Form1 : Form
+    public partial class Form1 : Form  //Using a global variable to set the variables
     {
         int P1= 0; //Declare variable to store number of 1p conins
         int P2 = 0; //Declare variable to store number of 2p conins
@@ -166,7 +166,13 @@ namespace WindowsFormsApp1
             PoundTotal.Text = ""; //Resets all the content in the text box back to its original state of nothing
             CPCtotal.Text = ""; //Resets all the content in the text box back to its original state of nothing
             NOCtotal.Text = ""; //Resets all the content in the text box back to its original state of nothing
-
+            p1_count.Text = "0"; //Rests the count for 1p back to 0
+            p2_count.Text = "0"; //Rests the count for 2p back to 0
+            p5_count.Text = "0"; //Rests the count for 5p back to 0
+            p10_count.Text = "0"; //Rests the count for 10p back to 0
+            p50_count.Text = "0"; //Rests the count for 50p back to 0
+            q1_count.Text = "0"; //Rests the count for 1 pound back to 0
+            q2_count.Text = "0"; //Rests the count for 2 pound back to 0
         }
     }
 }
