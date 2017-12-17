@@ -25,8 +25,25 @@ namespace WindowsFormsApp1
         public Form1()
         {
             InitializeComponent();
+            CPCtotal.Text = "0"; //sets the default value for the credit box
+            NOCtotal.Text = "0"; //Sets the default value for the number of credit box
         }
 
+        private void UpdateTotals() // function to update the totals based added money
+        {
+            double calcs = (double) Ptotal/100; //creates a temp variable to store the total in £ and P
+            PoundTotal.Text = calcs.ToString(); //displays the updated amount
+             
+
+            double NoCreds = Double.Parse(CPCtotal.Text); //parses the value of a credit
+            NoCreds = NoCreds * 100; // turns the credit into an int to calculate number of credits
+            
+
+            int calcs1 = (int)NoCreds; // works out the credit in pence
+            calcs1 = Ptotal / calcs1 ; // divides the pence total to calculate number of credits
+
+            NOCtotal.Text = calcs1.ToString(); // displays the number of credits
+        }
 
         private void Coins_Enter(object sender, EventArgs e)
         {
@@ -50,14 +67,24 @@ namespace WindowsFormsApp1
 
         private void Button1P_Click(object sender, EventArgs e)
         {
-            P1 = P1 + 1; // When 1p button clicked add 1 to number.
-            Ptotal = Ptotal + 1; // When 1p button clicked add 1 to total money
-            textBox1.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
+            if (CPCtotal.Text=="0") // checks if credit value has been set
+            {
+                MessageBox.Show("You have not set the cost of a credit"); //if not show a message
+            }
+            else //else perform the actions below for functionality
+            {
+                P1 = P1 + 1; // When 1p button clicked add 1 to number.
+                Ptotal = Ptotal + 1; // When 1p button clicked add 1 to total money
+                PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
+                p1_count.Text = P1.ToString(); //updates the total number of coins label
+                UpdateTotals(); // calls function to update totals on screen|
+            }
+
         }
 
         private void label1_Click(object sender, EventArgs e)
         {
-
+            string test = "test";
         }
 
         private void label2_Click(object sender, EventArgs e)
@@ -73,6 +100,47 @@ namespace WindowsFormsApp1
         private void Button50P_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Button5P_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button20P_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void CPCtotal_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button2P_Click(object sender, EventArgs e)
+        {
+            if (CPCtotal.Text == "0") // checks if credit value has been set
+            {
+                MessageBox.Show("You have not set the cost of a credit"); //if not show a message
+            }
+            else //else perform the actions below for functionality
+            {
+                P2 = P2 + 1; // When 2p button clicked add 1 to number.
+                Ptotal = Ptotal + 2; // When 1p button clicked add 1 to total money
+                PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
+                p2_count.Text = P2.ToString(); //updates the total number of coins label
+                UpdateTotals(); // calls function to update totals on screen
+            }
         }
     }
 }
