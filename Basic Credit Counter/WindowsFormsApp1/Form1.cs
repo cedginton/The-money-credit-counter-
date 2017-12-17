@@ -55,15 +55,7 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button7_Click(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void Button1P_Click(object sender, EventArgs e)
         {
@@ -77,23 +69,8 @@ namespace WindowsFormsApp1
                 Ptotal = Ptotal + 1; // When 1p button clicked add 1 to total money
                 PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
                 p1_count.Text = P1.ToString(); //updates the total number of coins label
-                UpdateTotals(); // calls function to update totals on screen|
+                UpdateTotals(); // calls function to update totals on the screen
             }
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-            string test = "test";
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
 
         }
 
@@ -104,7 +81,11 @@ namespace WindowsFormsApp1
 
         private void Button5P_Click(object sender, EventArgs e)
         {
-
+            P5 = P5 + 1; // When 5p button clicked add 1 to number.
+            Ptotal = Ptotal + 5; // When 5p button clicked add 5 to total money
+            PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
+            p5_count.Text = P5.ToString(); //updates the total number of coins label
+            UpdateTotals(); // calls function to update totals on the screen
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -136,11 +117,16 @@ namespace WindowsFormsApp1
             else //else perform the actions below for functionality
             {
                 P2 = P2 + 1; // When 2p button clicked add 1 to number.
-                Ptotal = Ptotal + 2; // When 1p button clicked add 1 to total money
+                Ptotal = Ptotal + 2; // When 2p button clicked add 2 to total money
                 PenceTotal.Text = Ptotal.ToString(); // updates the total displayed in the GUI.
                 p2_count.Text = P2.ToString(); //updates the total number of coins label
                 UpdateTotals(); // calls function to update totals on screen
             }
+        }
+
+        private void Button10P_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
