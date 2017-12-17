@@ -212,6 +212,7 @@ namespace WindowsFormsApp1
             p2_count.Text = "0"; //Rests the count for 2p back to 0
             p5_count.Text = "0"; //Rests the count for 5p back to 0
             p10_count.Text = "0"; //Rests the count for 10p back to 0
+            p20_count.Text = "0"; //Resters the count for the 20p back to 0
             p50_count.Text = "0"; //Rests the count for 50p back to 0
             q1_count.Text = "0"; //Rests the count for 1 pound back to 0
             q2_count.Text = "0"; //Rests the count for 2 pound back to 0
